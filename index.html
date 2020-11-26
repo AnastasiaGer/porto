@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
 <body>
@@ -409,8 +410,16 @@
 
             <div class="modal-work">
                 <div class="modal-work__preview">
-                    <img class="modal-work__photo" src="https://placehold.it/790x780" alt="">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="https://placehold.it/790x780" alt="">
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="https://placehold.it/790x780/333" alt="">
+                        </div>
+                    </div>
                 </div>
+
                 <div class="modal-work__content">
 
                     <div class="modal-work__header">
@@ -435,11 +444,11 @@
                     </div>
 
                     <div class="modal-work__footer">
-                        <button class="modal-work__btn" type="button">
+                        <button class="modal-work__btn slickPrev" type="button">
                             <img src="images/back.svg" height="11" alt="">
                             Previous
                         </button>
-                        <button class="modal-work__btn" type="button">
+                        <button class="modal-work__btn slickNext" type="button">
                             Next
                             <img src="images/next.svg" height="11" alt="">
                         </button>
@@ -631,6 +640,7 @@
         </div><!-- /.modal__dialog -->
     </div><!-- /.modal -->
 
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
