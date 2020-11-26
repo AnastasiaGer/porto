@@ -35,6 +35,7 @@ $(function () {
     $('body').addClass('no-scroll');
 
     $(modalId).addClass('show');
+    $('[data-slider="slick"]').slick('setPosition');
   });
 
   modalClose.on("click", function (evt) {
@@ -55,5 +56,29 @@ $(function () {
 
   $('.modal__dialog').on("click", function (evt) {
     evt.stopPropagation();
+  });
+
+  // Slider
+  $('[data-slider="slick"]').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    dots: true,
+  });
+
+  $(".slickPrev").on("click", function (evt) {
+    evt.preventDefault();
+    let currentSlider = $(this).parents(".modal").find('[data-slider="slick"]');
+
+    currentSlider.slick("slickPrev");
+  });
+
+
+  $(".slickNext").on("click", function (evt) {
+    evt.preventDefault();
+    let currentSlider = $(this).parents(".modal").find('[data-slider="slick"]');
+    currentSlider.slick("slickNext");
   });
 });
