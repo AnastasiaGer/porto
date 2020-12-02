@@ -2,7 +2,7 @@
 @import "vars";
 
 html {
-    font-size: 15px;
+   font-size: 15px;
 }
 
 body {
@@ -16,12 +16,7 @@ body {
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
@@ -35,49 +30,10 @@ p {
     box-sizing: border-box;
 }
 
-.slick-slider,
-.slick-list,
-.slick-track {
-    height: 100%;
-}
 
-.slick-dots {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+/* Vendor */
+@import "vendor/slick";
 
-    position: absolute;
-    bottom: 1.4rem;
-    left: 0;
-    z-index: 2;
-
-    li {
-        margin: 0 0.5rem;
-
-        &.slick-active {
-            button {
-                background-color: #fff;
-            }
-        }
-    }
-
-    button {
-        width: 11px;
-        height: 11px;
-
-        padding: 0;
-        background-color: #fff;
-        border: 1px solid #ffffff;
-        background: transparent;
-        border-radius: 50%;
-        font-size: 0;
-        color: transparent;
-        cursor: pointer;
-    }
-}
 
 /* Block */
 @import "blocks/container";
@@ -98,10 +54,10 @@ p {
 @import "blocks/modal";
 @import "blocks/modal-work";
 @import "blocks/timeline";
-@import "blocks/progress-bar.less";
-@import "blocks/contact.less";
-@import "blocks/form.less";
-@import "blocks/textarea.less";
+@import "blocks/progress-bar";
+@import "blocks/contact";
+@import "blocks/form";
+@import "blocks/burger";
 
 
 /* Helpers */
